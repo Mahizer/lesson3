@@ -8,4 +8,12 @@
 def inf_func(word):
     return word.title()
 
-print(inf_func(input('Введите слово или предложение: ')))
+user_sen = input('Введите слово или предложение: ')
+
+alp = ord('a')
+alp = set(''.join([chr(i) for i in range(alp, alp + 26)]))
+if set(user_sen) & set(alp):
+    print(inf_func(user_sen))
+else:
+    print('Можно вводить только латинские буквы!')
+
